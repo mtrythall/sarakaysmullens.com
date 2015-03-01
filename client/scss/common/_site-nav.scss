@@ -37,7 +37,7 @@ category: Navigation
 .NavItem,
 .NavTriggerCTA {
   padding: 1em;
-  font-size:  1.15em;
+  font-size: 1.15em;
   line-height: 1.2;
 }
 
@@ -46,12 +46,18 @@ category: Navigation
 }
 
 .logo {
-  display: block;
+  display: flex;
+  align-items: center;
   // Logo should be 100% minus the width of our menu toggler.
   // But it should also be able to grow.
   flex: 1 1 calc(100% - 14em);
   order: 1; // It should also be first
+  padding: 0 1em;
   text-align: left;
+}
+
+.logo img {
+  max-height: 40px;
 }
 
 /*
@@ -61,7 +67,7 @@ category: Navigation
   display: none;
 }
 
-.NavTrigger:checked ~ .NavItem {
+.NavTrigger:checked ~ .NavItem:not(.logo) {
   display: block;
 }
 
@@ -80,7 +86,7 @@ category: Navigation
 }
 
 // Handle the larger display by changing orders
-@include at-break('min-width: 700px') {
+@include at-break('min-width: 760px') {
   .SiteNav {
     // Turn off wrapping so each item
     // stays on one line.
@@ -106,10 +112,20 @@ category: Navigation
     order: 2;
   }
 
-  .NavItem.logo {
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 240px;
     // Put the brand/logo in the center
     order: 3;
+    padding: 0;
     text-align: center;
+  }
+
+  .logo img {
+    width: 240px;
+    max-width: 95%;
   }
 
   .NavItem[href*='blog'] {

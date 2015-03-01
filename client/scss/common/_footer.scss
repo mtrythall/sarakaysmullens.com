@@ -1,0 +1,25 @@
+/*doc
+---
+title: Footer
+name: footer
+category: Navigation
+---
+```html_example
+    <div class='example'>Amazing Style Guide coming soon...</div>
+```
+*/
+
+.SiteFooter {
+  background: $brand-color;
+  text-align: center;
+  color: $white;
+}
+
+.SiteFooter a {
+  color: $white;
+}
+
+.container-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
