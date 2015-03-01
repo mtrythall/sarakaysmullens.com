@@ -1,0 +1,122 @@
+/*doc
+---
+title: Site Navigation
+name: sitenav
+category: Navigation
+---
+```html_example
+    <div class='example'>Amazing Style Guide coming soon...</div>
+```
+*/
+
+
+// Header & Nav
+.SiteHeader {
+  background: $brand-color;
+}
+
+.SiteNav {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.NavItem {
+  display: none;
+  flex: 1 1 100%;
+  order: 3; // Our nav should come after everything on mobile
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $white;
+  transition: color 0.5s ease-in-out;
+}
+
+.NavItem,
+.NavTriggerCTA {
+  padding: 1em;
+  font-size:  1.15em;
+  line-height: 1.2;
+}
+
+.NavItem:hover {
+  color: $white;
+}
+
+.logo {
+  display: block;
+  // Logo should be 100% minus the width of our menu toggler.
+  // But it should also be able to grow.
+  flex: 1 1 calc(100% - 14em);
+  order: 1; // It should also be first
+  text-align: left;
+}
+
+/*
+  Handle our menu toggle w/CSS only because we're dreamers
+*/
+.NavTrigger {
+  display: none;
+}
+
+.NavTrigger:checked ~ .NavItem {
+  display: block;
+}
+
+.NavTriggerCTA {
+  // The menu toggler should be able to grow but never
+  // be smaller than 8em so it doesn't break.
+  flex: 1 0 8em;
+  order: 2; // It should also come after the logo
+  padding: 1em;
+  font-size: 1.15em;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: right;
+  color: $white;
+  cursor: pointer;
+}
+
+// Handle the larger display by changing orders
+@include at-break('min-width: 700px') {
+  .SiteNav {
+    // Turn off wrapping so each item
+    // stays on one line.
+    flex-wrap: nowrap;
+  }
+
+  .NavTriggerCTA {
+    display: none;
+  }
+
+  .NavItem {
+    display: block;
+    // Each item should be 100% of the available
+    // width, which forces them to be equal width here.
+    flex: 1 1 100%;
+  }
+
+  .NavItem[href*='books'] {
+    order: 1;
+  }
+
+  .NavItem[href*='articles'] {
+    order: 2;
+  }
+
+  .NavItem.logo {
+    // Put the brand/logo in the center
+    order: 3;
+    text-align: center;
+  }
+
+  .NavItem[href*='blog'] {
+    order: 4;
+  }
+
+  .NavItem[href*='contact'] {
+    order: 5;
+  }
+}
