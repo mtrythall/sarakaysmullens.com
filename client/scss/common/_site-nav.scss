@@ -32,15 +32,15 @@ category: Navigation
   transition: color 0.5s ease-in-out;
 }
 
-.NavItem,
-.NavTriggerCTA {
-  padding: 1em;
-  font-size: 1.15em;
-  line-height: 1.2;
+.NavItem:hover {
+  color: #a0e9b2;
 }
 
-.NavItem:hover {
-  color: $white;
+.NavItem,
+.NavTriggerCTA {
+  padding: 1em 0;
+  font-size: 1.15em;
+  line-height: 1.2;
 }
 
 .logo {
@@ -48,9 +48,9 @@ category: Navigation
   align-items: center;
   // Logo should be 100% minus the width of our menu toggler.
   // But it should also be able to grow.
-  flex: 1 1 calc(100% - 14em);
+  flex: 1 1 140px;
   order: 1; // It should also be first
-  padding: 0 1em;
+  padding: 0;
   text-align: left;
 }
 
@@ -70,11 +70,8 @@ category: Navigation
 }
 
 .NavTriggerCTA {
-  // The menu toggler should be able to grow but never
-  // be smaller than 8em so it doesn't break.
-  flex: 1 0 8em;
+  flex: 1 1 auto;
   order: 2; // It should also come after the logo
-  padding: 1em;
   font-size: 1.15em;
   font-weight: 700;
   line-height: 1.2;
