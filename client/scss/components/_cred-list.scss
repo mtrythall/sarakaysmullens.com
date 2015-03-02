@@ -1,0 +1,34 @@
+/*doc
+---
+title: Credentials List
+name: credlist
+category: Components
+---
+```html_example
+<div class="CredList">
+  <div class="container-inner">
+    <header class="CredList-header">
+      <img
+        src="/assets/img/award.png"
+        alt="The outline of a trophy encased in a circle"
+        class="CredList-image" />
+      <h3 class="CredList-headline">Awards and Honors</h3>
+    </header>
+
+    <ul class="CredList-items">
+      <li>Lifetime Achievement Award from the Pennsylvania chapter of NASW</li>
+      <li>NASW Media Award for Best Article Association of Social Workers</li>
+    </ul>
+  </div>
+</div>
+```
+*/
+
+.CredList-header {
+  text-align: center;
+}
+
+.CredList-headline {
+  font-family: $support-font;
+  @include font-size(ms(4), $line-height: true);
+}

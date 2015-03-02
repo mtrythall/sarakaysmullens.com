@@ -10,16 +10,21 @@ category: Navigation
 */
 
 .SiteFooter {
+  margin-top: 6rem;
+  padding: 3rem 0 6rem;
   background: $brand-color;
   text-align: center;
   color: $white;
 }
 
-.SiteFooter a {
-  color: $white;
+.SiteFooter-copy {
+  @include font-size(1.3em);
 }
 
-.container-inner {
-  max-width: 1000px;
-  margin: 0 auto;
+.SiteFooter-copyright {
+  font-size: 1em;
+}
+
+.SiteFooter a {
+  color: $white;
 }

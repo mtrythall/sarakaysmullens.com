@@ -50,7 +50,7 @@
  font-size: ($font-size / $context) * 1em;
 
  @if $line-height == true{
-   line-height:ceil($font-size / $rhythm-unit) * ($rhythm-unit / $font-size);
+   line-height: ceil($font-size / $rhythm-unit) * ($rhythm-unit / $font-size);
  }
 }
 

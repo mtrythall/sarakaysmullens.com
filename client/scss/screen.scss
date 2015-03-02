@@ -16,17 +16,9 @@
 @import "common/elements"; // Base reset per our design
 @import "common/forms";
 @import "common/buttons";
+@import "common/layout";
 
 @import "common/site-nav";
 @import "common/footer";
 
-/*doc
----
-title: Sample Docs
-name: example
-category: basics
----
-```html_example
-    <div class='example'>Amazing Style Guide coming soon...</div>
-```
-*/
+@import "components/cred-list";
