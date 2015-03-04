@@ -1,0 +1,97 @@
+/*doc
+---
+title: Latest Articles
+name: latestarticles
+category: Blocks
+---
+```html_example
+<div class="LatestArticles">
+  <div class="container-inner">
+    <h2 class="LatestArticles-headline">Latest Articles</h2>
+
+    <div class="LatestArticles-list">
+      <article class="Post">
+        <h3 class="Post-title">
+          <a href="#">Don Draper and the New York Mets: 1969, A Year of Miracles</a>
+        </h3>
+        <p class="Post-location">Found on <a href="#">Huffington Post</a></p>
+      </article>
+      <article class="Post">
+        <h3 class="Post-title">
+          <a href="#">Talking About Child Sexual Abuse, Why I Believe Dylan Farrow, and What Social Workers Need To Know and Do</a>
+        </h3>
+        <p class="Post-location">Found on <a href="#">The New Social Worker</a></p>
+      </article>
+      <article class="Post">
+        <h3 class="Post-title">
+          <a href="#">Don Draper and the New York Mets: 1969, A Year of Miracles</a>
+        </h3>
+        <p class="Post-location">Found on <a href="#">Huffington Post</a></p>
+      </article>
+    </div>
+  </div>
+</div>
+```
+*/
+
+.LatestArticles {
+  padding: 3rem 0;
+}
+
+.LatestArticles-headline {
+  margin-bottom: 1em;
+  @include font-size(ms(3), $line-height: true);
+  font-family: $support-font;
+  text-align: center;
+}
+
+.Post:nth-child(2n) {
+  padding: 1.5rem 0;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+
+.Post a {
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: $text-color;
+}
+
+.Post-title {
+  @include font-size(ms(1), $line-height: true);
+  font-weight: 600;
+}
+
+.Post-location {
+  margin-bottom: 0;
+}
+
+.Post-title a:hover,
+.Post-location a:hover {
+  color: #3cbcd8;
+}
+
+@include at-break($large-display) {
+  .LatestArticles {
+    padding: 6rem 0;
+  }
+
+  .LatestArticles-list {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .Post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1.5rem;
+    width: calc(100% * 1/3 - 1.5rem);
+  }
+
+  .Post:nth-child(2n) {
+    border: none;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+  }
+}
