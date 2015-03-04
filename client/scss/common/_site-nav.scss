@@ -81,7 +81,7 @@ category: Navigation
 }
 
 // Handle the larger display by changing orders
-@include at-break('min-width: 760px') {
+@include at-break($large-display) {
   .SiteNav {
     // Turn off wrapping so each item
     // stays on one line.

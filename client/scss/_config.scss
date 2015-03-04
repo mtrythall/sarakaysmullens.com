@@ -8,7 +8,7 @@ $base-line-height: 1.5;
 $rhythm-unit: $base-line-height / 2; // Makes math a lot easier
 
 // Use modular-scale to get our scaling
-$base-ratio: $major-third; // Major third, 1.25
+$base-ratio: $fourth;
 
 $show-guide: false; // Show a baseline guide
 $guide-color: #f1e8fd;
@@ -39,7 +39,10 @@ $error-color: darken(red, 15%);
 $input-padding: .5em 1em;
 
 /* GLOBAL STYLES */
-$border-radius: 2px;
+$border-radius: 8px;
+
+/* BREAKPOINTS */
+$large-display: 'min-width: 760px';
 
 
 /*

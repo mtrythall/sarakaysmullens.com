@@ -1,0 +1,73 @@
+/*doc
+---
+title: Book Hero
+name: bookhero
+category: Blocks
+---
+```html_example
+<div class="BookHero">
+  <div class="container-inner">
+    <section class="BookHero-info">
+      <h3 class="BookHero-subHeadline">CURRENT RELEASE</h3>
+      <h2 class="BookHero-headline">Title of Current Book Goes Here</h2>
+
+      <p class="BookHero-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rhoncus, massa et ullamcorper molestie, ...</>
+
+      <ul class="Book-buyList">
+        <li><a href="#" class="Btn Btn--rainbow">Buy on Amazon</a></li>
+        <li><a href="#" class="Btn Btn--rainbow">Buy on Lorem</a></li>
+      </ul>
+    </section>
+  </div>
+</div>
+```
+*/
+
+.BookHero {
+  padding: 3rem 0;
+  background: #a9a370;
+  color: $white;
+}
+
+.BookHero-subHeadline {
+  font-family: $support-font;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.BookHero-headline {
+  font-weight: 600;
+}
+
+.BookHero-description {
+  @include font-size(1.3em);
+}
+
+.Book-buyList {
+  padding: 0;
+}
+
+.Book-buyList li {
+  @include inline-block;
+  margin-right: .5em;
+  list-style: none;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.Book-buyList .Btn {
+  padding: .8em 1.5em;
+  @include font-size(1.2em);
+}
+
+@include at-break($large-display) {
+  .BookHero {
+    padding: 5rem 0;
+  }
+
+  .BookHero-info {
+    margin-left: 300px;
+  }
+}

@@ -34,7 +34,6 @@
 
   @include button-colors($color, $color);
   border: 2px solid $color;
-  border-bottom-width: $btn-bottom-width;
 
   &,
   &:hover {
@@ -50,24 +49,38 @@
 /* BEGIN STYLES */
 
 button,
-.btn {
+.Btn {
   @include inline-block;
   // Skinny top and bottoms but wider buttons, relative to font size
   padding: $input-padding;
 
-  border: 1px solid;
+  border: 2px solid;
   border-radius: $border-radius;
 
+  font-family: $base-font;
+  font-weight: 700;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
 }
 
 button,
-.btn-primary {
-  @include button-colors(darken(red, 15%));
+.Btn {
+  @include ghost-btn($black);
 }
 
-.btn-secondary {
+.Btn--secondary {
   @include button-colors($highlight-color);
+}
+
+.Btn--rainbow {
+  font-family: $base-font;
+  background: linear-gradient(to right, #6abf81 50%, #7db9e8 100%);
+
+  &,
+  &:visited, 
+  &:hover {
+    border-color: $white;
+    color: $white;
+  }
 }

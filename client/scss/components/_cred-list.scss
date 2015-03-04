@@ -24,6 +24,10 @@ category: Components
 ```
 */
 
+.CredList {
+  margin-bottom: 4rem;
+}
+
 .CredList-header {
   text-align: center;
 }
@@ -31,4 +35,23 @@ category: Components
 .CredList-headline {
   font-family: $support-font;
   @include font-size(ms(4), $line-height: true);
+  margin: em(.5) 0 em(1);
+}
+
+.CredList-items li {
+}
+
+.CredList-items--split {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.CredList-items--split li {
+  width: calc(50% - 4rem);
+  margin-right: 4rem;
+  margin-bottom: .5em;
+}
+
+.CredList-items--split li:nth-child(even) {
+  margin-right: 0;
 }
