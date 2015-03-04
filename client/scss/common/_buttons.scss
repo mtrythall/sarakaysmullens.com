@@ -75,10 +75,10 @@ button,
 
 .Btn--rainbow {
   font-family: $base-font;
-  background: linear-gradient(to right, #6abf81 50%, #7db9e8 100%);
+  background: linear-gradient(to right, #6abf81 20%, #7db9e8 100%);
 
   &,
-  &:visited, 
+  &:visited,
   &:hover {
     border-color: $white;
     color: $white;
