@@ -34,7 +34,7 @@ category: Components
 
 .CredList-headline {
   font-family: $support-font;
-  @include font-size(ms(4), $line-height: true);
+  @include font-size(ms(3), $line-height: true);
   margin: em(.5) 0 em(1);
 }
 

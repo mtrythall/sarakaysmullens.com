@@ -36,6 +36,7 @@ category: Blocks
 }
 
 .BookHero-headline {
+  @include font-size(ms(3), $line-height: true);
   font-weight: 600;
 }
 
