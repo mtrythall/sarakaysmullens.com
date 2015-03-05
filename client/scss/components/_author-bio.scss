@@ -1,0 +1,40 @@
+/*doc
+---
+title: Author Bio
+name: authorbio
+category: Blocks
+---
+```html_example
+
+```
+*/
+
+.AuthorBio {
+  background: linear-gradient(to right, #6abf81 5%, #7db9e8 100%);
+  margin-bottom: 3rem;
+  padding: 3rem 0;
+  color: $white;
+}
+
+.AuthorBio-header {
+  text-align: center;
+}
+
+.AuthorBio-name {
+  margin-bottom: .25em;
+}
+
+.AuthorBio-name,
+.AuthorBio-title {
+  font-family: $support-font;
+}
+
+@include at-break($large-display) {
+  .AuthorBio {
+    padding: 6rem 0;
+  }
+
+  .AuthorBio-header {
+    text-align: left;
+  }
+}
