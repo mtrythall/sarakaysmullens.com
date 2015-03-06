@@ -29,12 +29,22 @@ category: Blocks
   font-family: $support-font;
 }
 
+.AuthorBio-bio {
+  @include font-size(1.2em);
+}
+
 @include at-break($large-display) {
   .AuthorBio {
     padding: 6rem 0;
   }
 
   .AuthorBio-header {
+    display: flex;
+    align-items: center;
     text-align: left;
+  }
+
+  .AuthorBio-info {
+    margin-left: 1.5rem;
   }
 }

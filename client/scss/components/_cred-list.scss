@@ -39,19 +39,23 @@ category: Components
 }
 
 .CredList-items li {
+  margin-bottom: .35em;
 }
 
-.CredList-items--split {
-  display: flex;
-  flex-wrap: wrap;
-}
 
-.CredList-items--split li {
-  width: calc(50% - 4rem);
-  margin-right: 4rem;
-  margin-bottom: .5em;
-}
+@include at-break($large-display) {
+  .CredList-items--split {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-.CredList-items--split li:nth-child(even) {
-  margin-right: 0;
+  .CredList-items--split li {
+    width: calc(50% - 4rem);
+    margin-right: 4rem;
+    margin-bottom: .5em;
+  }
+
+  .CredList-items--split li:nth-child(even) {
+    margin-right: 0;
+  }
 }

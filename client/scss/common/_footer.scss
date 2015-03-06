@@ -17,6 +17,36 @@ category: Navigation
   color: $white;
 }
 
+.SiteFooter-socialLinks {
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.SiteFooter-socialLinks li {
+  display: inline-block;
+  list-style: none;
+
+  &:first-child {
+    margin-right: .5rem;
+  }
+}
+
+.SiteFooter-socialLinks a {
+  display: inline-block;
+}
+
+.SiteFooter-socialLinks .fa {
+  $size: 42px;
+
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background: $white;
+  font-size: 2em;
+  line-height: $size;
+  color: $brand-color;
+}
+
 .SiteFooter-copy {
   @include font-size(1.3em);
 }
