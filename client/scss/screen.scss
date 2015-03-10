@@ -21,7 +21,8 @@
 @import "common/site-nav";
 @import "common/footer";
 
-@import "components/book-hero";
+@import "components/page-header";
+@import "components/books";
 @import "components/author-bio";
 @import "components/cred-list";
-@import "components/latest-articles";
+@import "components/posts";

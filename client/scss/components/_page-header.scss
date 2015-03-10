@@ -1,0 +1,33 @@
+.PageHeader {
+  margin-bottom: 2rem;
+}
+
+.PageHeader-title {
+  margin: 0 0 1rem;
+  line-height: 1.5;
+}
+
+.PageHeader-controls > * {
+  @include inline-block;
+}
+
+.PageHeader-controlHeadline {
+  margin: 0 1rem 1rem 0;
+  font-weight: 400;
+}
+
+@include at-break($large-display) {
+  .PageHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+  }
+
+  .PageHeader-title {
+    margin: 0;
+  }
+
+  .PageHeader-controlHeadline {
+    margin-bottom: 0;
+  }
+}

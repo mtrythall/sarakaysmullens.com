@@ -3,3 +3,11 @@
  *
  * Base element reset. Builds off of Normalize.
  */
+
+h1 {
+  margin-top: 3rem;
+  font-family: $support-font;
+  @include font-size(ms(2), $line-height: true);
+  font-weight: 700;
+  text-transform: uppercase;
+}

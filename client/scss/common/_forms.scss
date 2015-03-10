@@ -1,0 +1,55 @@
+
+input,
+textarea,
+select,
+.select-wrap {
+  padding: .5em .8em;
+  border: 3px solid $black;
+  border-radius: 8px;
+}
+
+/*
+  Custom Selects
+*/
+
+.select-wrap {
+  position: relative;
+  overflow: hidden;
+  padding: 0 1.5em 0 0;
+
+  &, select {
+    cursor: pointer;
+  }
+}
+
+.select-wrap:after {
+  position: absolute;
+  top: 40%;
+  right: .8em;
+
+  height: 10px;
+	width: 10px;
+
+  border: 10px solid transparent;
+  border-top-color: #000000;
+
+  color: $text-color;
+  content: " ";
+  pointer-events: none;
+}
+
+.select-wrap select {
+  @include inline-block;
+
+  width: 130%;
+
+  border: none;
+  box-shadow: none;
+
+  background-color: transparent;
+  background-image: none;
+
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}

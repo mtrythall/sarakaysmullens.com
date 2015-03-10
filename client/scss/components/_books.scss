@@ -5,13 +5,13 @@ name: bookhero
 category: Blocks
 ---
 ```html_example
-<div class="BookHero">
+<div class="Book">
   <div class="container-inner">
-    <section class="BookHero-info">
-      <h3 class="BookHero-subHeadline">CURRENT RELEASE</h3>
-      <h2 class="BookHero-headline">Title of Current Book Goes Here</h2>
+    <section class="Book-info">
+      <h3 class="Book-subHeadline">CURRENT RELEASE</h3>
+      <h2 class="Book-headline">Title of Current Book Goes Here</h2>
 
-      <p class="BookHero-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rhoncus, massa et ullamcorper molestie, ...</>
+      <p class="Book-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rhoncus, massa et ullamcorper molestie, ...</>
 
       <ul class="Book-buyList">
         <li><a href="#" class="Btn Btn--rainbow">Buy on Amazon</a></li>
@@ -23,28 +23,35 @@ category: Blocks
 ```
 */
 
-.BookHero {
-  padding: 3rem 0;
-  background: #a9a370 url(../assets/img/book-hero-bg.jpg) center center;
-  color: $white;
+.Book {
+  @include clear;
 }
 
-.BookHero-book {
+.Book + .Book {
+  margin-top: 8rem;
+}
+
+.Book-bookImage {
   display: none;
 }
 
-.BookHero-subHeadline {
+.Book-subHeadline {
   font-family: $support-font;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.BookHero-headline {
+.Book-headline {
   @include font-size(ms(3), $line-height: true);
   font-weight: 600;
 }
 
-.BookHero-description {
+.Book-subTitle {
+  @include font-size(1.5em);
+  font-family: $support-font;
+}
+
+.Book-description {
   @include font-size(1.3em);
 }
 
@@ -67,25 +74,36 @@ category: Blocks
   @include font-size(1.2em);
 }
 
+.BookHero {
+  margin-top: -5rem;
+  padding: 3rem 0;
+  background: #a9a370 url(../assets/img/book-hero-bg.jpg) no-repeat;
+  color: $white;
+}
+
 @include at-break($large-display) {
   $book-width: 220px;
 
   .BookHero {
+    margin-top: -5rem;
     padding: 5rem 0;
   }
 
-  .BookHero .container-inner {
+  .Book .container-inner {
     @include clear;
   }
 
-  .BookHero-book {
+  .Book-bookImage {
     display: block;
     float: left;
-    margin-top: 2rem;
     width: $book-width;
   }
 
-  .BookHero-info {
-    margin-left: calc(#{$book-width} + 3rem);
+  .BookHero .Book-bookImage {
+    margin-top: 2rem;
+  }
+
+  .Book-info {
+    margin-left: $book-width + 48px;
   }
 }

@@ -12,7 +12,14 @@ category: Navigation
 
 // Header & Nav
 .SiteHeader {
+  margin-bottom: 3rem;
   background: $brand-color;
+}
+
+@include at-break($large-display) {
+  .SiteHeader {
+    margin-bottom: 5rem;
+  }
 }
 
 .SiteNav {

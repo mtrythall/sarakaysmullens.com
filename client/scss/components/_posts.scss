@@ -1,15 +1,15 @@
 /*doc
 ---
-title: Latest Articles
-name: latestarticles
-category: Blocks
+title: Posts
+name: posts
+category: Posts
 ---
 ```html_example
-<div class="LatestArticles">
+<div class="LatestPosts">
   <div class="container-inner">
-    <h2 class="LatestArticles-headline">Latest Articles</h2>
+    <h2 class="LatestPosts-headline">Latest Articles</h2>
 
-    <div class="LatestArticles-list">
+    <div class="LatestPosts-list">
       <article class="Post">
         <h3 class="Post-title">
           <a href="#">Don Draper and the New York Mets: 1969, A Year of Miracles</a>
@@ -34,33 +34,13 @@ category: Blocks
 ```
 */
 
-.LatestArticles {
-  padding: 3rem 0;
-}
-
-.LatestArticles-headline {
-  margin-bottom: 1em;
-  @include font-size(ms(3), $line-height: true);
-  font-family: $support-font;
-  text-align: center;
-}
-
-.Post {
-  padding: 1.5rem 0;
-}
-
-.Post:nth-child(2n) {
-  border-top: 1px solid lightgray;
-  border-bottom: 1px solid lightgray;
-}
-
 .Post a {
   text-decoration: none;
   color: $text-color;
 }
 
 .Post-title {
-  @include font-size(ms(1), $line-height: true);
+  @include font-size(ms(4), $line-height: true);
   font-weight: 600;
 }
 
@@ -73,17 +53,47 @@ category: Blocks
   color: #3cbcd8;
 }
 
+
+/*
+  Latest Posts
+*/
+.LatestPosts {
+  padding: 3rem 0;
+}
+
+.LatestPosts-headline {
+  margin-bottom: 1em;
+  @include font-size(ms(3), $line-height: true);
+  font-family: $support-font;
+  text-align: center;
+}
+
+.LatestPosts {
+  .Post {
+    padding: 1.5rem 0;
+  }
+
+  .Post-title {
+    @include font-size(ms(1), $line-height: true);
+  }
+
+  .Post:nth-child(2n) {
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+  }
+}
+
 @include at-break($large-display) {
-  .LatestArticles {
+  .LatestPosts {
     padding: 6rem 0;
   }
 
-  .LatestArticles-list {
+  .LatestPosts-list {
     display: flex;
     justify-content: space-around;
   }
 
-  .Post {
+  .LatestPosts .Post {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,7 +101,7 @@ category: Blocks
     width: calc(100% * 1/3);
   }
 
-  .Post:nth-child(2n) {
+  .LatestPosts .Post:nth-child(2n) {
     border: none;
     border-left: 1px solid lightgray;
     border-right: 1px solid lightgray;
