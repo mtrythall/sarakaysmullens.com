@@ -12,8 +12,14 @@
 }
 
 .PageHeader-controlHeadline {
-  margin: 0 1rem 1rem 0;
+  margin: 0 1rem 0 0;
   font-weight: 400;
+}
+
+@include at-break('min-width: 360px') {
+  .PageHeader-controlHeadline {
+    margin-bottom: 1rem;
+  }
 }
 
 @include at-break($large-display) {

@@ -11,3 +11,19 @@ h1 {
   font-weight: 700;
   text-transform: uppercase;
 }
+
+.sqs-layout > .sqs-row {
+  margin-left: auto;
+  margin-left: auto;
+}
+
+[class*=sqs-col] .sqs-block,
+.sqs-layout:not(.sqs-editing) > .sqs-row:first-child > [class*=sqs-col]:first-child > .sqs-block:last-child, .sqs-layout:not(.sqs-editing) .sqs-block + .sqs-row .sqs-block:not(.float):last-child {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.sqs-block {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}

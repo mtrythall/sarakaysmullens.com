@@ -2,10 +2,23 @@
 input,
 textarea,
 select,
-.select-wrap {
-  padding: .5em .8em;
-  border: 3px solid $black;
-  border-radius: 8px;
+button,
+input[type='button'],
+.select-wrap,
+.form-wrapper .field-list .field .field-element {
+  padding: .5em .8em !important;
+  border: 3px solid $black !important;
+  border-radius: 8px !important;
+  background: $white !important;
+  font-family: $base-font !important;
+  font-size: 1rem !important;
+  color: $text-color !important;
+}
+
+button,
+input[type='button'] {
+  padding: 1em !important;
+  font-weight: 700 !important;
 }
 
 /*
