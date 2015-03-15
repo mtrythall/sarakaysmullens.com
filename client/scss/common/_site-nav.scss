@@ -46,7 +46,7 @@ category: Navigation
 .NavItem,
 .NavTriggerCTA {
   padding: 1em 0;
-  font-size: 1.15em;
+  font-size: 1em;
   line-height: 1.2;
 }
 
@@ -118,7 +118,7 @@ category: Navigation
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 0 0 240px;
+    flex: 0 0 38%;
     // Put the brand/logo in the center
     order: 3;
     padding: 0;

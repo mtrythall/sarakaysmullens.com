@@ -13,8 +13,8 @@ h1 {
 }
 
 .sqs-layout > .sqs-row {
-  margin-left: auto;
-  margin-left: auto;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 [class*=sqs-col] .sqs-block,

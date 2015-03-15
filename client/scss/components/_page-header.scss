@@ -24,9 +24,12 @@
 
 @include at-break($large-display) {
   .PageHeader {
+    margin-bottom: 5rem;
+  }
+
+  .PageHeader--split {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 5rem;
   }
 
   .PageHeader-title {
