@@ -27,3 +27,44 @@ h1 {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
+
+.image-block {
+  margin: 2rem 0;
+}
+
+.sqs-block[class*=float-left],
+.image-block.float-left {
+  margin: 0 2rem 1rem 0;
+}
+
+.sqs-block[class*=float-right],
+.image-block.float-right {
+  margin: 0 0 1rem 2rem;
+}
+
+.image-caption {
+  background: #e2e2e2;
+}
+
+.image-caption p {
+  margin-top: 0;
+  padding: .5rem;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+}
+
+blockquote {
+  margin: 3rem;
+  font-family: $support-font;
+  font-size: 1.7em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.2;
+
+  color: $brand-color;
+}
+
+blockquote:before {
+  display: none;
+}

@@ -97,11 +97,19 @@ category: Blocks
 }
 
 .BookHero {
-  margin-top: -3rem;
+  margin: -3rem 0 0;
   padding: 3rem 0;
   background: #a9a370 url(../assets/img/book-hero-bg.jpg) no-repeat center center fixed;
   background-size: cover;
   color: $white;
+}
+
+.BookHero .Book-bookImageWrap {
+  perspective: 0;
+}
+
+.BookHero .Book-bookImage {
+  transform: rotateY(-12deg);
 }
 
 .BookHero .Book-bookImageWrap:after {

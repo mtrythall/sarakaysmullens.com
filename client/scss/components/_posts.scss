@@ -60,6 +60,9 @@ category: Posts
   color: #3cbcd8;
 }
 
+.Post-content {
+  @include clear;
+}
 
 /*
   Latest Posts
@@ -115,4 +118,9 @@ category: Posts
     border-left: 1px solid lightgray;
     border-right: 1px solid lightgray;
   }
+}
+
+/* Hacks */
+.Post-content .sqs-block {
+  padding-top: 1rem !important;
 }
