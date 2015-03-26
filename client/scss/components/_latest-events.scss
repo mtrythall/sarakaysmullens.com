@@ -1,0 +1,74 @@
+/*doc
+---
+title: Latest Events
+name: latestevents
+category: Components
+---
+```html_example
+<div class="CredList">
+  <div class="container-inner">
+    <header class="CredList-header">
+      <img
+        src="/assets/img/award.png"
+        alt="The outline of a trophy encased in a circle"
+        class="CredList-image" />
+      <h3 class="CredList-headline">Awards and Honors</h3>
+    </header>
+
+    <ul class="CredList-items">
+      <li>Lifetime Achievement Award from the Pennsylvania chapter of NASW</li>
+      <li>NASW Media Award for Best Article Association of Social Workers</li>
+    </ul>
+  </div>
+</div>
+```
+*/
+
+.LatestEvents {
+  padding: 3rem 0;
+  background: #f8f8f8;
+}
+
+.LatestEvents-headline {
+  margin-bottom: 3rem;
+  @include font-size(ms(3), $line-height: false);
+  font-family: $support-font;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.Event-date {
+  min-width: 8em;
+  @include font-size(ms(3), $line-height: false);
+  font-family: $support-font;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  color: #b7b7b7;
+}
+
+.Event-title {
+  @include font-size(ms(3), $line-height: false);
+  font-weight: 600;
+}
+
+.Event-subTitle {
+  @include font-size(ms(1));
+  font-family: $support-font;
+  font-weight: 400;
+}
+
+.Event-details {
+  @include font-size(ms(1));
+}
+
+@include at-break($large-display) {
+  .Event {
+    display: flex;
+  }
+
+  .Event-date {
+    margin-top: 2em;
+  }
+}
