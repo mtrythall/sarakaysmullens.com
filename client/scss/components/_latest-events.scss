@@ -31,9 +31,8 @@ category: Components
 
 .LatestEvents-headline {
   margin-bottom: 3rem;
-  @include font-size(ms(3), $line-height: false);
+  @include font-size(ms(3), $line-height: true);
   font-family: $support-font;
-  font-weight: 700;
   line-height: 1.2;
   text-align: center;
 }
