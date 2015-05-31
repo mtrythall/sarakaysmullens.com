@@ -100,10 +100,12 @@ category: Navigation
   }
 
   .NavItem {
-    display: block;
+    display: flex;
     // Each item should be 100% of the available
     // width, which forces them to be equal width here.
     flex: 1 1 100%;
+     justify-content: center;
+     align-items: center;
   }
 
   .NavItem[href*='books'] {
